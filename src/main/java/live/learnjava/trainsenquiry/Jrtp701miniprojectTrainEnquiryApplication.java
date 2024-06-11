@@ -35,7 +35,7 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 			LocalTime arrivalTime = LocalTime.parse("21:30:00");
 			train.setArrivalTime(arrivalTime);
 			train.setFare(1980.50);
-			train.setRealTimeStatus("On Time");
+			train.setRealTimeStatus("Delayed");
 			train.setCreatedBy("Rohit Shetty");
 			trainRepository.save(train);
 
@@ -50,7 +50,7 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 			train1.setArrivalTime(arrivalTime);
 			train1.setFare(2050.50);
 			train1.setRealTimeStatus("On Time");
-			train1.setCreatedBy("Manta Chaudhary");
+			train1.setCreatedBy("Mamta Chaudhary");
 			trainRepository.save(train1);
 
 		};
