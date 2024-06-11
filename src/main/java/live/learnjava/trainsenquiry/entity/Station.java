@@ -1,7 +1,6 @@
 package live.learnjava.trainsenquiry.entity;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -15,42 +14,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "TRAIN")
+@Table(name = "STATION")
 @Data
-public class Train {
+public class Station {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "TRAIN_ID", nullable = false)
-	private Integer train_id;
+	@Column(name = "STATION_ID")
+	private Integer stationId;
 
-	@Column(name = "TRAIN_NUMBER", nullable = false)
-	private Integer train_number;
+	@Column(name = "STATION_CODE", length = 10)
+	private String stationCode;
 
-	@Column(name = "TRAIN_NAME", length = 20)
-	private String train_name;
-
-	@Column(name = "ORIGIN_STATION", length = 20)
-	private String originStation;
-
-	@Column(name = "DESTINATION_STATION", length = 20)
-	private String destinationStation;
-
-	@Column(name = "DEPARTURE_TIME")
-	private LocalTime departureTime;
-
-	@Column(name = "ARRIVAL_TIME")
-	private LocalTime arrivalTime;
-
-	@Column(name = "FARE")
-	private Double fare;
-
-	@Column(name = "REAL_TIME_STATUS", length = 20)
-	private String realTimeStatus;
-
-	@Column(name = "ACTIVE_SWITCH", length = 20)
-	private String activeSw = "active";
-
+	@Column(name = "STATION_NAME", length = 20)
+	private String stationName;
+	
 	@Column(name = "CREATED_AT", updatable = false)
 	@CreationTimestamp
 	private LocalDateTime createdDate;
