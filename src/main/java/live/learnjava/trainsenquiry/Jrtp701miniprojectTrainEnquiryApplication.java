@@ -1,6 +1,6 @@
 package live.learnjava.trainsenquiry;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -30,9 +30,9 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 			train.setTrain_name("Vande Bharat");
 			train.setOriginStation("New Delhi, JN");
 			train.setDestinationStation("Varanasi, JN");
-			LocalTime departureTime = LocalTime.parse("03:15:00");
+			LocalDateTime departureTime = LocalDateTime.parse("2024-10-10T04:15:00");
 			train.setDepartureTime(departureTime);
-			LocalTime arrivalTime = LocalTime.parse("21:30:00");
+			LocalDateTime arrivalTime = LocalDateTime.parse("2024-10-11T03:15:00");
 			train.setArrivalTime(arrivalTime);
 			train.setFare(1980.50);
 			train.setRealTimeStatus("Delayed");
@@ -44,9 +44,9 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 			train1.setTrain_name("Godavari Express");
 			train1.setOriginStation("Hyderabad, JN");
 			train1.setDestinationStation("Vishakapatnam, JN");
-			departureTime = LocalTime.parse("12:15:00");
+			departureTime = LocalDateTime.parse("2024-10-10T20:15:00");
 			train1.setDepartureTime(departureTime);
-			arrivalTime = LocalTime.parse("09:30:00");
+			arrivalTime = LocalDateTime.parse("2024-10-11T21:15:00");
 			train1.setArrivalTime(arrivalTime);
 			train1.setFare(2050.50);
 			train1.setRealTimeStatus("On Time");
@@ -83,9 +83,7 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 			station4.setStationCode("BSB");
 			station4.setStationName("Varanasi, JN");
 			station4.setCreatedBy("STATION_MASTER_2");
-			stationRepository.save(station4);
-			
-			
+			stationRepository.save(station4);			
 		};
 	}
 

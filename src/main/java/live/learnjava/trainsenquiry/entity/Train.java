@@ -1,10 +1,12 @@
 package live.learnjava.trainsenquiry.entity;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,10 +39,12 @@ public class Train {
 	private String destinationStation;
 
 	@Column(name = "DEPARTURE_TIME")
-	private LocalTime departureTime;
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+	private LocalDateTime departureTime;
 
 	@Column(name = "ARRIVAL_TIME")
-	private LocalTime arrivalTime;
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+	private LocalDateTime arrivalTime;
 
 	@Column(name = "FARE")
 	private Double fare;
