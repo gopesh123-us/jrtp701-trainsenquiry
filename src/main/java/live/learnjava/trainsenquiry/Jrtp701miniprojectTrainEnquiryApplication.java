@@ -22,7 +22,7 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 	}
 
 	@Bean
-	public CommandLineRunner insertTrainData(ITrainRepository trainRepository) {
+	CommandLineRunner insertTrainData(ITrainRepository trainRepository) {
 		log.info("Inserting 2 records in the TRAIN table of TRAINSDB database");
 		return args -> {
 			Train train = new Train();
@@ -58,7 +58,7 @@ public class Jrtp701miniprojectTrainEnquiryApplication {
 	}
 
 	@Bean
-	public CommandLineRunner insertStationData(IStationRepository stationRepository) {
+	CommandLineRunner insertStationData(IStationRepository stationRepository) {
 		log.info("Inserting 4 records in STATION table of TRAINSDB database");
 		return args -> {
 			Station station1 = new Station();
